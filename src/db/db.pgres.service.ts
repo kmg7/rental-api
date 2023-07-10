@@ -11,7 +11,7 @@ export class PgresService {
       connectionString: config.get('DB_URL'),
     });
   }
-  async query(query: string, params?: Array<string>): Promise<DbResponse> {
+  async query(query: string, params?: Array<any>): Promise<DbResponse> {
     let client: PoolClient;
     let response: DbResponse;
     try {
