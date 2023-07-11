@@ -23,10 +23,6 @@ export class VehicleService {
     }
     let query =
       'INSERT INTO Vehicles(class, make, model, transmission, engineType, bodyType) VALUES($1, $2, $3, $4, $5, $6)';
-    let params = [];
-    for (const key in dto) {
-      params.push(dto[key]);
-    }
 
     const result = await this.dbClient.query(query, [
       dto.class,
@@ -53,8 +49,6 @@ export class VehicleService {
       [id],
     );
     if (result.success) {
-      console.log(result);
-
       if (!result.data[0]) {
         throw new NotFoundException();
       }

@@ -34,6 +34,7 @@ export class RentService {
       }
       throw new NotFoundException();
     }
+    console.log(result);
     throw new InternalServerErrorException('Something went wrong');
   }
 

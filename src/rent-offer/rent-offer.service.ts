@@ -40,6 +40,7 @@ export class RentOfferService {
       }
       throw new NotFoundException();
     }
+    console.log(result);
     throw new InternalServerErrorException('Something went wrong');
   }
 
@@ -49,8 +50,6 @@ export class RentOfferService {
       [id],
     );
     if (result.success) {
-      console.log(result);
-
       if (!result.data[0]) {
         throw new NotFoundException();
       }

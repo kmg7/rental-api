@@ -11,10 +11,8 @@ export class EmployeeService {
   constructor(private dbClient: PgresService) {}
 
   async update(id: number, dto: EmployeeUpdateDto) {
-    console.log(dto);
     const l = Object.keys(dto).length;
 
-    console.log();
     if (l === 0) {
       throw new BadRequestException('Body must contain data');
     }

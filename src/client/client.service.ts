@@ -23,10 +23,6 @@ export class ClientService {
     }
     let query =
       'INSERT INTO Clients(ssn, name, email, password, creditCard) VALUES($1, $2, $3, $4, $5)';
-    let params = [];
-    for (const key in dto) {
-      params.push(dto[key]);
-    }
 
     const result = await this.dbClient.query(query, [
       dto.ssn,
