@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Pool, PoolClient, QueryResult } from 'pg';
 import { ConfigService } from '@nestjs/config';
-import { DbResponse } from './response/response.model';
+import { DbResponse } from './model/response.model';
 
 @Injectable()
 export class PgresService {
