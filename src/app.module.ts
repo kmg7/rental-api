@@ -5,6 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { ClientModule } from './client/client.module';
 import { EmployeeModule } from './employee/employee.module';
 import { CompanyModule } from './company/company.module';
+import { VehicleModule } from './vehicle/vehicle.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { CompanyModule } from './company/company.module';
     ClientModule,
     EmployeeModule,
     CompanyModule,
+    VehicleModule,
   ],
 })
 export class AppModule {}
